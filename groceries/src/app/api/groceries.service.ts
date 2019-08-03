@@ -43,7 +43,6 @@ export class GroceriesService {
     this.http.delete(this.baseURL + '/api/groceries/' + id).subscribe(res => {
       this.items = res;
       this.dataChangeSubject.next(true);
-      // window.location.reload();
     });
   }
 
@@ -51,7 +50,6 @@ export class GroceriesService {
     this.http.post(this.baseURL + '/api/groceries', item).subscribe(res => {
       this.items = res;
       this.dataChangeSubject.next(true);
-      // window.location.reload();
     });
   }
 
@@ -61,7 +59,6 @@ export class GroceriesService {
     this.http.put(this.baseURL + '/api/groceries/' + item.id, item).subscribe(res => {
       this.items = res;
       this.dataChangeSubject.next(true);
-      // window.location.reload();
     });
   }
 }
